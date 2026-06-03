@@ -63,7 +63,7 @@ canvas{display:block;image-rendering:pixelated;image-rendering:crisp-edges;posit
 @keyframes pi{from{transform:scale(.5) rotate(-4deg);opacity:0}to{transform:none;opacity:1}}
 .lcard::before{content:'';position:absolute;inset:5px;border:2px solid rgba(124,174,229,0.28);pointer-events:none}
 .l-seal{font-size:26px;margin-bottom:5px;animation:bb .9s infinite}
-.l-num{font-size:8px;color:#0c2e59;letter-spacing:2px;margin-bottom:8px;white-space:pre-wrap;word-break:break-word;line-height:1.2}
+.l-num{font-size:8px;color:#0c2e59;letter-spacing:2px;margin-bottom:8px}
 .l-rule{height:3px;background:repeating-linear-gradient(90deg,#7caee5 0,#7caee5 5px,transparent 5px,transparent 9px);margin:6px auto;width:80%}
 .l-body{font-size:9px;color:#122d52;line-height:2.1;white-space:pre-line;font-style:italic;margin:8px 0 12px}
 .l-btn{background:#d4e8ff;border:3px solid #7caee5;box-shadow:3px 3px 0 rgba(88,112,143,0.12);color:#0c2e59;font-family:'Press Start 2P',monospace;font-size:8px;padding:8px 16px;cursor:pointer;transition:all .1s}
@@ -215,7 +215,7 @@ let sebi, ball, goals, girl;
 let particles = [], floats = [];
 let csState = {active:false, step:0, timer:0, hugAnim:0};
 let world = {};
-const isMobile = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || window.matchMedia('(pointer:coarse)').matches;
+const isMobile = ('ontouchstart' in window)||(navigator.maxTouchPoints>0);
 
 const LETTERS = [
   {seal:'🌸',num:'SCRISOARE #1',body:'Stii ca de fiecare data\ncand aud numele tau,\nma opresc din ce fac\nsi zambesc singur?'},
@@ -360,12 +360,12 @@ let slides, slideIdx, typeDone, typeTimer;
 function initStory() {
   slides = [
     {p:'˙𐃷˙',spk:'voce lirica foarte misterioasa',txt:`intr o zi random ${playerName} a primit un link misterios...`},
-    {p:'☭',spk:'heckar nou pe roblox',txt:'"daca vrei sa ti nu iti umpli device ul cu virusi, marcheaza cele 5 goluri. too late to back down now"'},
+    {p:'☭',spk:'heckar nou pe roblox',txt:'"daca vrei sa nu iti umpli device ul cu virusi, marcheaza cele 5 goluri. too late to back down now"'},
     {p:'˙𐃷˙',spk:playerName.toUpperCase(),txt:'"hell nah trebuia sa mi instalez cel mai bun antivirus"'},
-    {p:'卐',spk:'TUTORIALLLLLLL',txt:'WASD sau sagetile = mergi ca voda prin lobada. SPACE = dai GOOOOOLLLLL messi messi !'},
+    {p:'卐',spk:'TUTORIALLLLLLL',txt:'WASD sau sagetile = mergi ca voda prin lobada. SPACE = dai GOOOOOLLLLL messi messi muie messi!'},
     {p:'卐',spk:'TUTORIALLLLLLL',txt:'da gol in ordine dintr un oarecare motiv (???) iti dai tu seama cum vine'},
-    {p:'卐',spk:'TUTORIALLLLLLL',txt:'intr un final daca nu ti bagi picioarele in el de joc si dai altF4 (daca ai mai ajuns pana aici) te asteapta un mesaj (din nefericire)'},
-    {p:'˙𐃷˙',spk:'voce lirica foarte misterioasa', txt:'good luckk si te rog nu da altF4 ca m am chinuit putin (sigur nu i facut cu ai in mare parte DA SCUZE NU STIAM SA FAC OK OK)'},
+    {p:'卐',spk:'TUTORIALLLLLLL',txt:'daca simti ca nu mai poti, sa stii ca mai poti putin, nu ti abandona sperantele, dorintele si persoana care aspiri sa devii. ai grija de tine pentru ca poate acum esti indrumata si stii ce ai de facut, dar vor fi momente in aceasta viata in care vei fi singura, in care nu vei avea sprijin si in care nu vei sti care alegere este cea mai corecta. alege mereu cu sufletul, dar gandeste si rational inainte. meriti tot ce i mai bun!'},
+    {p:'˙𐃷˙',spk:'voce lirica foarte misterioasa', txt:'daca ai ajuns pana aici fara sa dai altF4 sa nu te invinovatesti pentru nimic din tot ceea ce s a intamplat, exista oameni care te apreciaza pentru cine esti, si mai ales exista oameni care tin la tine, te iubesc, te admira si te respecta, nu pentru ceea ce vrei tu sa fii pentru ei, ci pentru ceea ce esti deja, good luck!'},
   ];
   slideIdx = 0;
   buildDots();
@@ -1074,8 +1074,8 @@ function updateSlot(i) {
 function showLetter() {
   const L = {
     seal:'ദ്ദി(˃ ᵕ ˂ ദ്ദി)',
-    num:'FELICITARI AI TERMINAT CEL MAI BS JOC EVER FUCK YEAA',
-    body:'putem te rog sa stam putin de vorba in ultima zi de scoala?'
+    num:'FELICITARI',
+    body:'nu meriti sa te injosesti in fata nimanui, esti o persoana buna, Bianca '
   };
   document.getElementById('lSeal').textContent=L.seal;
   document.getElementById('lNum').textContent=L.num;
